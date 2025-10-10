@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Pawan Mobile Repairing Center</title>
+<style>
+  body {
+    margin: 0;
+    font-family: "Poppins", sans-serif;
+    background: linear-gradient(to right, #ffe6f0, #ffd6e7);
+    color: #333;
+  }
+
+  nav {
+    background: #ff7096;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    color: white;
+  }
+
+  nav h2 {
+    font-family: "Pacifico", cursive;
+    margin: 0;
+  }
+
+  nav a {
+    color: white;
+    text-decoration: none;
+    margin: 0 10px;
+    font-weight: bold;
+  }
+
+  nav a:hover {
+    text-decoration: underline;
+  }
+
+  .container {
+    max-width: 900px;
+    margin: 20px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  }
+
+  h1 {
+    text-align: center;
+    color: #ff3b6f;
+  }
+
+  input, textarea, select {
+    width: 100%;
+    padding: 8px;
+    margin: 6px 0;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+  }
+
+  button {
+    padding: 10px 14px;
+    border-radius: 8px;
+    border: 0;
+    cursor: pointer;
+    background: #ff4d79;
+    color: white;
+    margin-top: 8px;
+  }
+
+  button:hover {
+    background: #e63961;
+  }
+
+  .card {
+    border: 1px solid #eee;
+    padding: 12px;
+    margin: 8px 0;
+    border-radius: 8px;
+    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
+  }
+
+  img.preview {
+    max-width: 100px;
+    border: 1px solid #ddd;
+    padding: 4px;
+    border-radius: 6px;
+  }
+
+  .footer {
+    background: #ffe6f0;
+    text-align: center;
+    padding: 12px;
+    margin-top: 40px;
+  }
+
+  .footer img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+
+  .social-icons a {
+    margin: 0 6px;
+    text-decoration: none;
+  }
+
+  .social-icons img {
+    width: 20px;
+    height: 20px;
+  }
+
+  @media (max-width:600px) {
+    nav {
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+</style>
+</head>
+<body>
+
+<nav>
+  <h2>Pawan Mobile Center</h2>
+  <div>
+    <a href="#">Home</a>
+    <a href="#">Services</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </div>
+</nav>
+
+<div class="container">
+  <h1>Repair Consent & Case Manager</h1>
+  
+  <label>Customer Name</label>
+  <input id="name" placeholder="Enter customer name">
+
+  <div style="display:flex; gap:8px; flex-wrap:wrap;">
+    <div style="flex:1 1 45%">
+      <label>Contact</label>
+      <input id="phone" placeholder="98XXXXXXXX">
+    </div>
+    <div style="flex:1 1 45%">
+      <label>Brand / Model</label>
+      <input id="model" placeholder="Samsung M30s, etc.">
+    </div>
+  </div>
+
+  <label>Address</label>
+  <input id="address" placeholder="Enter address">
+
+  <label>Upload ID (photo/pdf)</label>
+  <input id="idfile" type="file" accept="image/*,application/pdf">
+
+  <label>Upload Purchase Receipt (photo/pdf)</label>
+  <input id="recfile" type="file" accept="image/*,application/pdf">
+
+  <label>Notes / Problem</label>
+  <textarea id="notes" rows="3" placeholder="Describe issue..."></textarea>
+
+  <div style="display:flex;gap:10px;flex-wrap:wrap;">
+    <button id="save">💾 Save Case</button>
+    <button id="export">📤 Export CSV</button>
+  </div>
+</div>
+
+<div id="cases" class="container"></div>
+
+<div class="footer">
+  <img src="your-photo.jpg" alt="You" />
+  <p>Made with ❤️ by Er.Pawan</p>
+  <div class="social-icons">
+    <a href="https://facebook.com/yourprofile" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/>
+    </a>
+    <a href="https://instagram.com/yourprofile" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"/>
+    </a>
+    <a href="https://t.me/yourprofile" target="_blank">
+      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"/>
+    </a>
+  </div>
+</div>
+
+<script>
+const KEY = 'shop_cases_v2';
+
+function readFileAsDataURL(file) {
+  return new Promise((res, rej) => {
+    if (!file) return res('');
+    const reader = new FileReader();
+    reader.onload = e => res(e.target.result);
+    reader.onerror = rej;
+    reader.readAsDataURL(file);
+  });
+}
+
+async function saveCase() {
+  const name = nameEl.value.trim();
+  if (!name) return alert('Please enter customer name!');
+  const phone = phoneEl.value.trim();
+  const model = modelEl.value.trim();
+  const address = addressEl.value.trim();
+  const notes = notesEl.value.trim();
+  const iddata = await readFileAsDataURL(idfile.files[0]);
+  const recdata = await readFileAsDataURL(recfile.files[0]);
+
+  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
+  arr.push({ id: Date.now(), name, phone, model, address, notes, iddata, recdata, date: new Date().toLocaleString() });
+  localStorage.setItem(KEY, JSON.stringify(arr));
+  renderCases();
+  alert('✅ Case saved successfully!');
+}
+
+function renderCases() {
+  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
+  if (!arr.length) return (cases.innerHTML = "<p>No cases yet.</p>");
+  let html = '';
+  arr.slice().reverse().forEach((c, i) => {
+    html += `
+      <div class="card">
+        <b>${c.name}</b> — ${c.phone} — ${c.model}
+        <button onclick="deleteCase(${c.id})" style="float:right;background:#ff7070;color:white;border:none;padding:4px 8px;border-radius:5px;">Delete</button>
+        <div><small>${c.date}</small></div>
+        <div>Address: ${c.address}</div>
+        <div>Notes: ${c.notes || '—'}</div>
+        <div>ID: ${c.iddata ? '<img class="preview" src="'+c.iddata+'">' : '—'} 
+             Receipt: ${c.recdata ? '<img class="preview" src="'+c.recdata+'">' : '—'}</div>
+      </div>
+    `;
+  });
+  cases.innerHTML = html;
+}
+
+function deleteCase(id) {
+  if (!confirm("Delete this case?")) return;
+  let arr = JSON.parse(localStorage.getItem(KEY) || '[]');
+  arr = arr.filter(c => c.id !== id);
+  localStorage.setItem(KEY, JSON.stringify(arr));
+  renderCases();
+}
+
+document.getElementById("save").addEventListener("click", saveCase);
+document.getElementById("export").addEventListener("click", () => {
+  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
+  if (!arr.length) return alert("No data to export");
+  const rows = arr.map(r => [r.name, r.phone, r.model, r.address, r.notes, r.date].map(x => `"${(x||'').replaceAll('"','""')}"`).join(',')).join('\n');
+  const csv = 'Name,Phone,Model,Address,Notes,Date\n' + rows;
+  const blob = new Blob([csv], { type: 'text/csv' });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = 'cases.csv';
+  a.click();
+  URL.revokeObjectURL(url);
+});
+
+const nameEl = document.getElementById('name');
+const phoneEl = document.getElementById('phone');
+const modelEl = document.getElementById('model');
+const addressEl = document.getElementById('address');
+const notesEl = document.getElementById('notes');
+const idfile = document.getElementById('idfile');
+const recfile = document.getElementById('recfile');
+const cases = document.getElementById('cases');
+
+renderCases();
+</script>
+
+</body>
+</html>
