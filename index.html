@@ -2,272 +2,762 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Pawan Mobile Repairing Center</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Pawan Mobile Repairing Center | Mobile Repair &amp; Accessories in Birgunj</title>
+<meta name="description" content="Pawan Mobile Repairing Center — professional smartphone repair, genuine spare parts and mobile accessories in Birgunj. Book a repair or shop online.">
+<meta property="og:title" content="Pawan Mobile Repairing Center">
+<meta property="og:description" content="Professional mobile repairing, genuine spare parts and quality accessories — all under one roof.">
+<meta property="og:type" content="website">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"LocalBusiness","name":"Pawan Mobile Repairing Center","image":"","telephone":"[PHONE NUMBER]","address":{"@type":"PostalAddress","streetAddress":"[INSERT EXACT SHOP ADDRESS]","addressLocality":"Birgunj","addressCountry":"NP"},"openingHours":"Mo-Sa 10:00-19:00"}
+</script>
 <style>
-  body {
-    margin: 0;
-    font-family: "Poppins", sans-serif;
-    background: linear-gradient(to right, #ffe6f0, #ffd6e7);
-    color: #333;
-  }
-
-  nav {
-    background: #ff7096;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px 20px;
-    color: white;
-  }
-
-  nav h2 {
-    font-family: "Pacifico", cursive;
-    margin: 0;
-  }
-
-  nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 10px;
-    font-weight: bold;
-  }
-
-  nav a:hover {
-    text-decoration: underline;
-  }
-
-  .container {
-    max-width: 900px;
-    margin: 20px auto;
-    background: white;
-    padding: 20px;
-    border-radius: 12px;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-  }
-
-  h1 {
-    text-align: center;
-    color: #ff3b6f;
-  }
-
-  input, textarea, select {
-    width: 100%;
-    padding: 8px;
-    margin: 6px 0;
-    border: 1px solid #ccc;
-    border-radius: 6px;
-  }
-
-  button {
-    padding: 10px 14px;
-    border-radius: 8px;
-    border: 0;
-    cursor: pointer;
-    background: #ff4d79;
-    color: white;
-    margin-top: 8px;
-  }
-
-  button:hover {
-    background: #e63961;
-  }
-
-  .card {
-    border: 1px solid #eee;
-    padding: 12px;
-    margin: 8px 0;
-    border-radius: 8px;
-    box-shadow: 0 1px 6px rgba(0,0,0,0.05);
-  }
-
-  img.preview {
-    max-width: 100px;
-    border: 1px solid #ddd;
-    padding: 4px;
-    border-radius: 6px;
-  }
-
-  .footer {
-    background: #ffe6f0;
-    text-align: center;
-    padding: 12px;
-    margin-top: 40px;
-  }
-
-  .footer img {
-    width: 30px;
-    height: 30px;
-    border-radius: 50%;
-  }
-
-  .social-icons a {
-    margin: 0 6px;
-    text-decoration: none;
-  }
-
-  .social-icons img {
-    width: 20px;
-    height: 20px;
-  }
-
-  @media (max-width:600px) {
-    nav {
-      flex-direction: column;
-      text-align: center;
-    }
-  }
+:root{
+  --bg:#F6F7F9; --surface:#FFFFFF; --surface-2:#EEF1F5; --text:#14181F; --text-dim:#5B6472;
+  --border:#E1E5EB; --blue:#2F6FED; --blue-dim:#E7EEFE; --amber:#FF8A3D; --amber-dim:#FFEEE0;
+  --green:#1E9E6B; --red:#E24C4C; --radius:14px; --radius-sm:8px;
+  --shadow:0 1px 2px rgba(20,24,31,.04), 0 8px 24px -12px rgba(20,24,31,.12);
+  --font-head:'Space Grotesk',sans-serif; --font-body:'Inter',sans-serif;
+  --grid-line: rgba(47,111,237,0.06);
+}
+:root[data-theme="dark"]{
+  --bg:#0E1116; --surface:#161A21; --surface-2:#1D222B; --text:#EDEFF3; --text-dim:#9AA3B2;
+  --border:#272E38; --blue:#5B8DF6; --blue-dim:#1B2740; --amber:#FF9D57; --amber-dim:#3A2716;
+  --green:#3FC98A; --red:#F26B6B;
+  --shadow:0 1px 2px rgba(0,0,0,.3), 0 8px 28px -12px rgba(0,0,0,.55);
+  --grid-line: rgba(91,141,246,0.08);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth;scroll-padding-top:70px}
+body{font-family:var(--font-body);background:var(--bg);color:var(--text);line-height:1.5;
+  padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px);
+  background-image:radial-gradient(var(--grid-line) 1px, transparent 1px);background-size:22px 22px;}
+h1,h2,h3,h4{font-family:var(--font-head);line-height:1.15;letter-spacing:-.01em}
+a{color:inherit;text-decoration:none}
+img{max-width:100%;display:block}
+button{font-family:var(--font-body);cursor:pointer}
+.container{max-width:1180px;margin:0 auto;padding:0 20px}
+.section{padding:64px 0}
+.section-head{max-width:620px;margin-bottom:36px}
+.eyebrow{color:var(--blue);font-weight:600;font-size:.85rem;margin-bottom:6px}
+.section-head h2{font-size:clamp(1.5rem,3vw,2.1rem)}
+.section-head p{color:var(--text-dim);margin-top:10px}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 22px;border-radius:999px;border:1px solid transparent;font-weight:600;font-size:.92rem;transition:transform .15s ease, background .2s ease;}
+.btn:active{transform:scale(.97)}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:#255ed1}
+.btn-amber{background:var(--amber);color:#1a1200}
+.btn-amber:hover{filter:brightness(1.05)}
+.btn-outline{background:transparent;border-color:var(--border);color:var(--text)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-sm{padding:8px 14px;font-size:.82rem;border-radius:8px}
+.btn-block{width:100%;justify-content:center}
+/* NAV */
+header{position:sticky;top:0;z-index:50;background:color-mix(in srgb, var(--bg) 88%, transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--border);padding-top:env(safe-area-inset-top,0px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{display:flex;align-items:center;gap:10px;font-family:var(--font-head);font-weight:700;font-size:1.05rem}
+.logo-mark{width:34px;height:34px;border-radius:9px;background:var(--blue);color:#fff;display:flex;align-items:center;justify-content:center;font-size:1.1rem}
+.nav-links{display:flex;gap:26px;font-size:.92rem;font-weight:500}
+.nav-links a{color:var(--text-dim);transition:color .15s}
+.nav-links a:hover,.nav-links a.active{color:var(--blue)}
+.nav-actions{display:flex;align-items:center;gap:6px}
+.icon-btn{width:38px;height:38px;border-radius:999px;border:1px solid var(--border);background:var(--surface);display:flex;align-items:center;justify-content:center;font-size:1.05rem;position:relative;color:var(--text)}
+.icon-btn:hover{border-color:var(--blue)}
+.badge{position:absolute;top:-5px;right:-5px;background:var(--amber);color:#1a1200;font-size:.65rem;font-weight:700;min-width:17px;height:17px;border-radius:999px;display:flex;align-items:center;justify-content:center;padding:0 3px}
+.hamburger{display:none}
+@media(max-width:900px){
+  .nav-links{display:none}
+  .hamburger{display:flex}
+}
+.mobile-menu{display:none;flex-direction:column;gap:2px;padding:10px 0 18px;border-top:1px solid var(--border)}
+.mobile-menu.open{display:flex}
+.mobile-menu a{padding:11px 4px;font-weight:500;color:var(--text)}
+/* HERO */
+.hero{padding:56px 0 40px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center}
+@media(max-width:860px){.hero{grid-template-columns:1fr;padding-top:36px}}
+.hero-eyebrow{display:inline-flex;align-items:center;gap:8px;background:var(--blue-dim);color:var(--blue);padding:6px 14px;border-radius:999px;font-size:.82rem;font-weight:600;margin-bottom:18px}
+.hero h1{font-size:clamp(2.1rem,5vw,3.3rem);animation:rise .6s ease both}
+.hero p.lead{margin-top:16px;color:var(--text-dim);font-size:1.08rem;max-width:52ch;animation:rise .6s .08s ease both}
+.hero-ctas{display:flex;gap:12px;margin-top:28px;flex-wrap:wrap;animation:rise .6s .16s ease both}
+@keyframes rise{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:none}}
+@media (prefers-reduced-motion: reduce){.hero h1,.hero p.lead,.hero-ctas{animation:none}}
+.hero-visual{position:relative;aspect-ratio:1/1;max-width:380px;margin:0 auto;display:flex;align-items:center;justify-content:center}
+.phone-card{width:230px;height:100%;max-height:420px;background:linear-gradient(160deg,var(--surface),var(--surface-2));border:1px solid var(--border);border-radius:34px;box-shadow:var(--shadow);position:relative;overflow:hidden}
+.phone-card::before{content:'';position:absolute;top:14px;left:50%;transform:translateX(-50%);width:50px;height:6px;border-radius:6px;background:var(--border)}
+.phone-glow{position:absolute;inset:0;background:conic-gradient(from 210deg, var(--blue), var(--amber), var(--blue));opacity:.16;filter:blur(30px);border-radius:50%}
+.tool-chip{position:absolute;background:var(--surface);border:1px solid var(--border);border-radius:999px;padding:8px 13px;font-size:.78rem;font-weight:600;box-shadow:var(--shadow);display:flex;align-items:center;gap:6px}
+.tool-chip.t1{top:8%;left:-6%}
+.tool-chip.t2{bottom:12%;right:-10%}
+/* QUICK SERVICES */
+.qs-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+@media(max-width:860px){.qs-grid{grid-template-columns:repeat(2,1fr)}}
+.qs-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:18px;transition:border-color .15s, transform .15s}
+.qs-card:hover{border-color:var(--blue);transform:translateY(-2px)}
+.qs-card .ic{font-size:1.5rem}
+.qs-card h4{margin-top:10px;font-size:.95rem}
+.qs-card p{color:var(--text-dim);font-size:.82rem;margin-top:4px}
+/* Category pills */
+.pill-row{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:24px}
+.pill{padding:8px 15px;border-radius:999px;border:1px solid var(--border);background:var(--surface);font-size:.85rem;font-weight:500;color:var(--text-dim)}
+.pill.active{background:var(--blue);color:#fff;border-color:var(--blue)}
+.filter-bar{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-bottom:18px}
+.search-box{flex:1;min-width:180px;display:flex;align-items:center;gap:8px;border:1px solid var(--border);background:var(--surface);border-radius:10px;padding:9px 13px}
+.search-box input{border:none;outline:none;background:transparent;color:var(--text);width:100%;font-size:.9rem}
+select.sel{border:1px solid var(--border);background:var(--surface);color:var(--text);border-radius:10px;padding:9px 12px;font-size:.85rem}
+/* Product grid */
+.product-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+@media(max-width:1000px){.product-grid{grid-template-columns:repeat(3,1fr)}}
+@media(max-width:700px){.product-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:420px){.product-grid{grid-template-columns:1fr 1fr;gap:10px}}
+.p-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);overflow:hidden;display:flex;flex-direction:column;transition:transform .15s, box-shadow .15s;cursor:pointer}
+.p-card:hover{transform:translateY(-3px);box-shadow:var(--shadow)}
+.p-thumb{aspect-ratio:1/1;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:2.1rem;position:relative}
+.p-stock{position:absolute;top:9px;left:9px;font-size:.65rem;font-weight:700;padding:3px 8px;border-radius:999px}
+.p-stock.in{background:var(--amber-dim);color:var(--amber)}
+.p-stock.low{background:#fde3e3;color:var(--red)}
+.p-body{padding:12px 13px 14px;display:flex;flex-direction:column;gap:6px;flex:1}
+.p-cat{color:var(--text-dim);font-size:.7rem;text-transform:uppercase;letter-spacing:.04em}
+.p-name{font-size:.92rem;font-weight:600}
+.p-rating{color:var(--amber);font-size:.78rem}
+.p-price{display:flex;align-items:baseline;gap:7px;margin-top:2px}
+.p-price .now{font-weight:700;font-size:1.02rem}
+.p-price .was{color:var(--text-dim);text-decoration:line-through;font-size:.8rem}
+.p-actions{display:flex;gap:6px;margin-top:8px}
+.p-actions .btn{flex:1;padding:8px 6px;font-size:.78rem}
+/* Cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(10,12,16,.5);opacity:0;pointer-events:none;transition:opacity .2s;z-index:80}
+.overlay.show{opacity:1;pointer-events:auto}
+.drawer{position:fixed;top:0;right:0;height:100%;width:min(400px,92vw);background:var(--bg);z-index:90;box-shadow:-8px 0 30px rgba(0,0,0,.2);transform:translateX(100%);transition:transform .25s ease;display:flex;flex-direction:column;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+.drawer.open{transform:translateX(0)}
+.drawer-head{padding:18px 20px;border-bottom:1px solid var(--border);display:flex;justify-content:space-between;align-items:center}
+.drawer-body{flex:1;overflow-y:auto;padding:14px 20px}
+.cart-item{display:flex;gap:10px;padding:12px 0;border-bottom:1px solid var(--border)}
+.cart-item .thumb{width:56px;height:56px;border-radius:8px;background:var(--surface-2);display:flex;align-items:center;justify-content:center;font-size:1.3rem;flex-shrink:0}
+.cart-item .info{flex:1}
+.cart-item .qty-row{display:flex;align-items:center;gap:8px;margin-top:6px}
+.qty-btn{width:24px;height:24px;border-radius:6px;border:1px solid var(--border);background:var(--surface);font-size:.9rem;line-height:1}
+.drawer-foot{padding:16px 20px 20px;border-top:1px solid var(--border)}
+.row-between{display:flex;justify-content:space-between;font-size:.88rem;margin-bottom:6px;color:var(--text-dim)}
+.row-between.total{color:var(--text);font-weight:700;font-size:1rem;margin-top:8px}
+.empty-state{text-align:center;padding:40px 10px;color:var(--text-dim)}
+.empty-state .ic{font-size:2.2rem;margin-bottom:8px}
+/* modal */
+.modal{position:fixed;inset:0;z-index:100;display:none;align-items:center;justify-content:center;padding:16px}
+.modal.open{display:flex}
+.modal-box{background:var(--surface);border-radius:var(--radius);max-width:480px;width:100%;max-height:88vh;overflow-y:auto;padding:26px;position:relative;border:1px solid var(--border)}
+.modal-close{position:absolute;top:14px;right:14px;width:32px;height:32px;border-radius:999px;border:1px solid var(--border);background:var(--surface-2)}
+.field{margin-bottom:14px}
+.field label{display:block;font-size:.82rem;font-weight:600;margin-bottom:5px}
+.field input,.field select,.field textarea{width:100%;padding:10px 12px;border:1px solid var(--border);border-radius:8px;background:var(--bg);color:var(--text);font-family:inherit;font-size:.9rem}
+.field input:focus,.field select:focus,.field textarea:focus,button:focus-visible,a:focus-visible{outline:2px solid var(--blue);outline-offset:2px}
+.pay-methods{display:flex;gap:10px;margin:14px 0}
+.pay-chip{flex:1;border:1px solid var(--border);border-radius:10px;padding:10px;text-align:center;font-size:.8rem;font-weight:700}
+.pay-chip.esewa{color:#5C2D91}.pay-chip.khalti{color:#5C2D91}.pay-chip.fonepay{color:var(--blue)}
+.pay-chip.sel{border-color:var(--blue);background:var(--blue-dim)}
+/* repair services / gallery / why */
+.grid-3{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+@media(max-width:860px){.grid-3{grid-template-columns:1fr 1fr}}
+@media(max-width:560px){.grid-3{grid-template-columns:1fr}}
+.svc-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:20px}
+.svc-card .ic{width:42px;height:42px;border-radius:10px;background:var(--blue-dim);color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:1.2rem;margin-bottom:12px}
+.svc-card h4{font-size:1rem}
+.svc-card p{color:var(--text-dim);font-size:.86rem;margin-top:6px}
+.gal-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px}
+@media(max-width:760px){.gal-grid{grid-template-columns:repeat(2,1fr)}}
+.gal-item{aspect-ratio:1/1;border-radius:10px;background:var(--surface-2);border:1px solid var(--border);display:flex;align-items:center;justify-content:center;flex-direction:column;gap:4px;font-size:.75rem;color:var(--text-dim);cursor:pointer;overflow:hidden}
+.gal-item span.ic{font-size:1.6rem}
+.lightbox{position:fixed;inset:0;background:rgba(6,8,11,.9);z-index:110;display:none;align-items:center;justify-content:center;flex-direction:column;gap:14px}
+.lightbox.open{display:flex}
+.lightbox .box{width:min(400px,80vw);aspect-ratio:1/1;background:var(--surface-2);border-radius:14px;display:flex;align-items:center;justify-content:center;font-size:3rem}
+.why-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media(max-width:760px){.why-grid{grid-template-columns:1fr 1fr}}
+@media(max-width:480px){.why-grid{grid-template-columns:1fr}}
+.why-item{display:flex;gap:12px;align-items:flex-start}
+.why-item .ic{color:var(--blue);font-size:1.2rem}
+.why-item h4{font-size:.95rem}
+.why-item p{color:var(--text-dim);font-size:.82rem;margin-top:3px}
+/* location/contact */
+.two-col{display:grid;grid-template-columns:1fr 1fr;gap:28px}
+@media(max-width:860px){.two-col{grid-template-columns:1fr}}
+.map-card{border-radius:var(--radius);overflow:hidden;border:1px solid var(--border);height:280px}
+.info-list li{list-style:none;display:flex;gap:10px;padding:9px 0;border-bottom:1px solid var(--border);font-size:.9rem}
+.info-list li:last-child{border:none}
+.contact-btns{display:flex;gap:10px;flex-wrap:wrap;margin-top:14px}
+.form-card{background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);padding:22px}
+/* footer */
+footer{background:var(--surface);border-top:1px solid var(--border);margin-top:20px;padding:48px 0 24px}
+.foot-grid{display:grid;grid-template-columns:1.4fr 1fr 1fr 1fr;gap:24px}
+@media(max-width:760px){.foot-grid{grid-template-columns:1fr 1fr}}
+.foot-grid h5{font-size:.85rem;margin-bottom:12px}
+.foot-grid ul{list-style:none}
+.foot-grid li{margin-bottom:8px;font-size:.85rem;color:var(--text-dim)}
+.foot-grid li a:hover{color:var(--blue)}
+.foot-bottom{border-top:1px solid var(--border);margin-top:30px;padding-top:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;font-size:.8rem;color:var(--text-dim)}
+.social-row{display:flex;gap:8px}
+/* floaters */
+.floaters{position:fixed;right:16px;bottom:16px;display:flex;flex-direction:column;gap:10px;z-index:60;padding-bottom:env(safe-area-inset-bottom,0px)}
+.fab{width:50px;height:50px;border-radius:999px;display:flex;align-items:center;justify-content:center;font-size:1.3rem;box-shadow:var(--shadow);color:#fff}
+.fab.wa{background:#25D366}
+.fab.call{background:var(--blue)}
+.fab.top{background:var(--surface);color:var(--text);border:1px solid var(--border);opacity:0;pointer-events:none;transition:opacity .2s}
+.fab.top.show{opacity:1;pointer-events:auto}
+/* toast */
+.toast-wrap{position:fixed;top:16px;left:50%;transform:translateX(-50%);z-index:200;display:flex;flex-direction:column;gap:8px;align-items:center}
+.toast{background:var(--text);color:var(--bg);padding:12px 18px;border-radius:10px;font-size:.88rem;font-weight:600;box-shadow:var(--shadow);animation:toastIn .25s ease}
+@keyframes toastIn{from{opacity:0;transform:translateY(-8px)}to{opacity:1;transform:none}}
+.skel{background:linear-gradient(90deg,var(--surface-2) 25%,var(--border) 37%,var(--surface-2) 63%);background-size:400% 100%;animation:skel 1.4s ease infinite}
+@keyframes skel{0%{background-position:100% 0}100%{background-position:0 0}}
+.sr-only{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0,0,0,0)}
 </style>
 </head>
 <body>
 
-<nav>
-  <h2>Pawan Mobile Repairing Center</h2>
-  <div>
-    <a href="#">Home</a>
-    <a href="#">Services</a>
-    <a href="#">About</a>
-    <a href="#">Contact</a>
-  </div>
-</nav>
+<div class="toast-wrap" id="toastWrap"></div>
 
-<div class="container">
-  <h1>Repair Consent & Case Manager</h1>
-  
-  <label>Customer Name</label>
-  <input id="name" placeholder="Enter customer name">
-
-  <div style="display:flex; gap:8px; flex-wrap:wrap;">
-    <div style="flex:1 1 45%">
-      <label>Contact</label>
-      <input id="phone" placeholder="98XXXXXXXX">
-    </div>
-    <div style="flex:1 1 45%">
-      <label>Brand / Model</label>
-      <input id="model" placeholder="Samsung M30s, etc.">
+<header>
+  <div class="container nav">
+    <a href="#home" class="logo"><span class="logo-mark">P</span> Pawan Mobile Repairing Center</a>
+    <nav class="nav-links">
+      <a href="#home">Home</a>
+      <a href="#shop">Shop</a>
+      <a href="#repair-services">Repair Services</a>
+      <a href="#gallery">Gallery</a>
+      <a href="#why">About Us</a>
+      <a href="#contact">Contact</a>
+    </nav>
+    <div class="nav-actions">
+      <button class="icon-btn" id="searchToggle" aria-label="Search">🔍</button>
+      <button class="icon-btn" id="themeToggle" aria-label="Toggle dark mode">🌙</button>
+      <button class="icon-btn" id="cartToggle" aria-label="Open cart">🛒<span class="badge" id="cartBadge">0</span></button>
+      <button class="icon-btn" id="acctBtn" aria-label="Account">👤</button>
+      <button class="icon-btn hamburger" id="hamburger" aria-label="Menu">☰</button>
     </div>
   </div>
+  <div class="container">
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="#home">Home</a><a href="#shop">Shop</a><a href="#repair-services">Repair Services</a>
+      <a href="#shop">Accessories</a><a href="#gallery">Gallery</a><a href="#why">About Us</a><a href="#contact">Contact</a>
+    </div>
+    <div id="searchBar" style="display:none;padding:10px 0 16px">
+      <div class="search-box"><span>🔍</span><input id="navSearch" placeholder="Search products, e.g. tempered glass..."></div>
+    </div>
+  </div>
+</header>
 
-  <label>Address</label>
-  <input id="address" placeholder="Enter address">
+<main id="home">
+  <section class="container hero">
+    <div>
+      <span class="hero-eyebrow">📍 Birgunj · Repair &amp; Accessories</span>
+      <h1>Your Mobile, Our Expertise.</h1>
+      <p class="lead">Professional mobile repairing, genuine spare parts and quality accessories — all under one roof.</p>
+      <div class="hero-ctas">
+        <a href="#shop" class="btn btn-primary">Shop Accessories</a>
+        <a href="#repair-booking" class="btn btn-outline">Book a Repair</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <div class="phone-glow"></div>
+      <div class="phone-card">
+        <div class="tool-chip t1">🔧 Genuine Parts</div>
+        <div class="tool-chip t2">⚡ Same-day Fix</div>
+      </div>
+    </div>
+  </section>
 
-  <label>Upload ID (photo/pdf)</label>
-  <input id="idfile" type="file" accept="image/*,application/pdf">
+  <section class="container" style="padding-bottom:56px">
+    <div class="qs-grid">
+      <div class="qs-card"><div class="ic">🔧</div><h4>Mobile Repair</h4><p>Full diagnostics &amp; repair.</p></div>
+      <div class="qs-card"><div class="ic">📱</div><h4>Display Replacement</h4><p>Original-quality screens.</p></div>
+      <div class="qs-card"><div class="ic">🔋</div><h4>Battery Replacement</h4><p>Health check &amp; swap.</p></div>
+      <div class="qs-card"><div class="ic">⚡</div><h4>Charging Repair</h4><p>Ports, pins &amp; cables.</p></div>
+      <div class="qs-card"><div class="ic">💻</div><h4>Software Solutions</h4><p>Updates &amp; troubleshooting.</p></div>
+      <div class="qs-card"><div class="ic">🛠️</div><h4>Hardware Repair</h4><p>Component-level fixes.</p></div>
+      <div class="qs-card"><div class="ic">📡</div><h4>Network Repair</h4><p>Signal &amp; SIM issues.</p></div>
+      <div class="qs-card"><div class="ic">💧</div><h4>Water Damage Repair</h4><p>Inspection &amp; recovery.</p></div>
+    </div>
+  </section>
 
-  <label>Upload Purchase Receipt (photo/pdf)</label>
-  <input id="recfile" type="file" accept="image/*,application/pdf">
+  <section class="container section" id="shop">
+    <div class="section-head"><span class="eyebrow">Shop</span><h2>Accessories &amp; spare parts</h2><p>Browse genuine mobile accessories and replacement parts.</p></div>
+    <div class="pill-row" id="catRow"></div>
+    <div class="filter-bar">
+      <select class="sel" id="sortSel">
+        <option value="pop">Popularity</option>
+        <option value="new">Newest</option>
+        <option value="low">Price: Low to High</option>
+        <option value="high">Price: High to Low</option>
+      </select>
+      <select class="sel" id="availSel">
+        <option value="all">All Availability</option>
+        <option value="in">In Stock</option>
+      </select>
+    </div>
+    <div class="product-grid" id="productGrid"></div>
+  </section>
 
-  <label>Notes / Problem</label>
-  <textarea id="notes" rows="3" placeholder="Describe issue..."></textarea>
+  <section class="container section" id="repair-booking">
+    <div class="section-head"><span class="eyebrow">Repair Booking</span><h2>Book a repair in minutes</h2><p>Tell us about your device and the problem — we'll take it from there.</p></div>
+    <form class="form-card" id="repairForm" style="max-width:640px">
+      <div class="two-col" style="gap:14px">
+        <div class="field"><label for="rDevice">Device Type</label>
+          <select id="rDevice" required><option value="">Select device</option>
+            <option>iPhone</option><option>Samsung</option><option>Xiaomi</option><option>Redmi</option>
+            <option>Realme</option><option>Oppo</option><option>Vivo</option><option>OnePlus</option><option>Other</option>
+          </select></div>
+        <div class="field"><label for="rProblem">Problem</label>
+          <select id="rProblem" required><option value="">Select problem</option>
+            <option>Broken Display</option><option>Battery Problem</option><option>Charging Problem</option>
+            <option>Speaker Problem</option><option>Microphone Problem</option><option>Camera Problem</option>
+            <option>Software Problem</option><option>Network Problem</option><option>Water Damage</option><option>Other</option>
+          </select></div>
+      </div>
+      <div class="two-col" style="gap:14px">
+        <div class="field"><label for="rName">Full Name</label><input id="rName" required placeholder="Your name"></div>
+        <div class="field"><label for="rPhone">Phone Number</label><input id="rPhone" required placeholder="98XXXXXXXX"></div>
+      </div>
+      <div class="two-col" style="gap:14px">
+        <div class="field"><label for="rModel">Device Model</label><input id="rModel" placeholder="e.g. iPhone 13"></div>
+        <div class="field"><label for="rDate">Preferred Date</label><input id="rDate" type="date"></div>
+      </div>
+      <div class="field"><label for="rDetails">Additional Details</label><textarea id="rDetails" rows="3" placeholder="Describe the issue..."></textarea></div>
+      <button class="btn btn-primary btn-block" type="submit">Book Repair</button>
+    </form>
+  </section>
 
-  <div style="display:flex;gap:10px;flex-wrap:wrap;">
-    <button id="save">💾 Save Case</button>
-    <button id="export">📤 Export CSV</button>
+  <section class="container section" id="repair-services">
+    <div class="section-head"><span class="eyebrow">Repair Services</span><h2>What we repair</h2></div>
+    <div class="grid-3">
+      <div class="svc-card"><div class="ic">📱</div><h4>Display Replacement</h4><p>Professional replacement for damaged or broken screens.</p></div>
+      <div class="svc-card"><div class="ic">🔋</div><h4>Battery Replacement</h4><p>Battery diagnosis and replacement.</p></div>
+      <div class="svc-card"><div class="ic">⚡</div><h4>Charging Port Repair</h4><p>Fix charging and connection problems.</p></div>
+      <div class="svc-card"><div class="ic">💻</div><h4>Software Repair</h4><p>Troubleshooting, updates and system-related solutions.</p></div>
+      <div class="svc-card"><div class="ic">🛠️</div><h4>Hardware Repair</h4><p>Professional diagnosis and hardware repair.</p></div>
+      <div class="svc-card"><div class="ic">💧</div><h4>Water Damage Repair</h4><p>Inspection and recovery of water-damaged devices.</p></div>
+      <div class="svc-card"><div class="ic">🔩</div><h4>Motherboard Repair</h4><p>Advanced component-level troubleshooting and repair.</p></div>
+    </div>
+    <div style="margin-top:26px"><a href="#repair-booking" class="btn btn-amber">Get Your Phone Repaired</a></div>
+  </section>
+
+  <section class="container section" id="gallery">
+    <div class="section-head"><span class="eyebrow">Gallery</span><h2>Inside the shop</h2><p>Placeholder tiles — replace with real shop photos.</p></div>
+    <div class="pill-row" id="galFilterRow">
+      <button class="pill active" data-g="all">All</button>
+      <button class="pill" data-g="Repairs">Repairs</button>
+      <button class="pill" data-g="Accessories">Accessories</button>
+      <button class="pill" data-g="Shop">Shop</button>
+      <button class="pill" data-g="Workstation">Workstation</button>
+    </div>
+    <div class="gal-grid" id="galGrid"></div>
+  </section>
+
+  <section class="container section" id="why">
+    <div class="section-head"><span class="eyebrow">About Us</span><h2>Why choose us</h2></div>
+    <div class="why-grid">
+      <div class="why-item"><span class="ic">🎓</span><div><h4>Experienced Technicians</h4><p>Hands-on repair expertise across brands.</p></div></div>
+      <div class="why-item"><span class="ic">✅</span><div><h4>Quality Spare Parts</h4><p>Parts sourced with care for reliability.</p></div></div>
+      <div class="why-item"><span class="ic">💬</span><div><h4>Transparent Pricing</h4><p>Clear quotes before any work begins.</p></div></div>
+      <div class="why-item"><span class="ic">⏱️</span><div><h4>Fast Service</h4><p>Most common repairs done same day.</p></div></div>
+      <div class="why-item"><span class="ic">🛍️</span><div><h4>Wide Range of Accessories</h4><p>Covers, cables, TWS, power banks &amp; more.</p></div></div>
+      <div class="why-item"><span class="ic">🤝</span><div><h4>Customer Support</h4><p>Reach us by call or WhatsApp anytime.</p></div></div>
+    </div>
+  </section>
+
+  <section class="container section">
+    <div class="two-col">
+      <div>
+        <div class="section-head" style="margin-bottom:18px"><span class="eyebrow">Location</span><h2>Visit our shop</h2></div>
+        <div class="map-card">
+          <iframe src="https://www.google.com/maps?q=Birgunj,Nepal&output=embed" width="100%" height="100%" style="border:0" loading="lazy" title="Shop location map"></iframe>
+        </div>
+        <ul class="info-list" style="margin-top:16px">
+          <li>📍 [INSERT EXACT SHOP ADDRESS]</li>
+          <li>📞 [PHONE NUMBER]</li>
+          <li>🕒 Mon–Sat: 10:00 AM – 7:00 PM</li>
+        </ul>
+        <a class="btn btn-outline" style="margin-top:12px" href="https://www.google.com/maps?q=Birgunj,Nepal" target="_blank" rel="noopener">Get Directions</a>
+      </div>
+      <div id="contact">
+        <div class="section-head" style="margin-bottom:18px"><span class="eyebrow">Contact</span><h2>Get in touch</h2></div>
+        <div class="contact-btns">
+          <a class="btn btn-primary" href="tel:[PHONE NUMBER]">📞 Call Now</a>
+          <a class="btn btn-amber" href="https://wa.me/[WHATSAPP NUMBER]" target="_blank" rel="noopener">💬 WhatsApp</a>
+          <a class="btn btn-outline" href="https://www.google.com/maps?q=Birgunj,Nepal" target="_blank" rel="noopener">🧭 Directions</a>
+        </div>
+        <form class="form-card" id="contactForm" style="margin-top:18px">
+          <div class="field"><label for="cName">Name</label><input id="cName" required></div>
+          <div class="field"><label for="cPhone">Phone</label><input id="cPhone" required></div>
+          <div class="field"><label for="cEmail">Email</label><input id="cEmail" type="email"></div>
+          <div class="field"><label for="cMsg">Message</label><textarea id="cMsg" rows="3" required></textarea></div>
+          <button class="btn btn-primary btn-block" type="submit">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="container">
+    <div class="foot-grid">
+      <div>
+        <div class="logo" style="margin-bottom:10px"><span class="logo-mark">P</span>Pawan Mobile Repairing Center</div>
+        <p style="color:var(--text-dim);font-size:.85rem">Trusted mobile repair and accessories shop in Birgunj — repairs, genuine parts, and everyday essentials.</p>
+        <div class="social-row" style="margin-top:14px">
+          <a class="icon-btn" href="[FACEBOOK URL]" target="_blank" rel="noopener" aria-label="Facebook">📘</a>
+          <a class="icon-btn" href="[INSTAGRAM URL]" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+          <a class="icon-btn" href="[TIKTOK URL]" target="_blank" rel="noopener" aria-label="TikTok">🎵</a>
+          <a class="icon-btn" href="[YOUTUBE URL]" target="_blank" rel="noopener" aria-label="YouTube">▶️</a>
+        </div>
+      </div>
+      <div><h5>Quick Links</h5><ul>
+        <li><a href="#home">Home</a></li><li><a href="#shop">Shop</a></li><li><a href="#repair-services">Repair Services</a></li>
+        <li><a href="#gallery">Gallery</a></li><li><a href="#why">About</a></li><li><a href="#contact">Contact</a></li></ul></div>
+      <div><h5>Customer Support</h5><ul>
+        <li><a href="tel:[PHONE NUMBER]">Call</a></li><li><a href="https://wa.me/[WHATSAPP NUMBER]" target="_blank" rel="noopener">WhatsApp</a></li>
+        <li><a href="#repair-booking">Repair Booking</a></li><li><a href="#" id="trackOrderLink">Order Tracking</a></li></ul></div>
+      <div><h5>Payment Methods</h5><ul><li>eSewa</li><li>Khalti</li><li>Fonepay</li></ul>
+        <h5 style="margin-top:16px">Location</h5><ul><li>[SHOP ADDRESS]</li></ul></div>
+    </div>
+    <div class="foot-bottom">
+      <span>© 2026 Pawan Mobile Repairing Center. All Rights Reserved.</span>
+      <span>Built for Birgunj — mobile repair &amp; accessories</span>
+    </div>
+  </div>
+</footer>
+
+<!-- Cart Drawer -->
+<div class="overlay" id="overlay"></div>
+<aside class="drawer" id="cartDrawer" aria-label="Shopping cart">
+  <div class="drawer-head"><h3>Your Cart</h3><button class="icon-btn" id="closeCart" aria-label="Close cart">✕</button></div>
+  <div class="drawer-body" id="cartBody"></div>
+  <div class="drawer-foot" id="cartFoot">
+    <div class="row-between"><span>Subtotal</span><span id="sumSub">Rs. 0</span></div>
+    <div class="row-between"><span>Delivery</span><span id="sumDel">Rs. 0</span></div>
+    <div class="row-between total"><span>Total</span><span id="sumTotal">Rs. 0</span></div>
+    <button class="btn btn-primary btn-block" id="checkoutBtn" style="margin-top:10px">Proceed to Checkout</button>
+    <button class="btn btn-outline btn-block" id="continueBtn" style="margin-top:8px">Continue Shopping</button>
+  </div>
+</aside>
+
+<!-- Product Quick View Modal -->
+<div class="modal" id="productModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeProductModal">✕</button>
+    <div id="productModalBody"></div>
   </div>
 </div>
 
-<div id="cases" class="container"></div>
-
-<div class="footer">
-  <img src="1.jpg" alt="You" />
-  <p>Made with ❤️ by Er.Pawan</p>
-  <div class="social-icons">
-    <a href="https://facebook.com/developerpawan093" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733547.png" alt="Facebook"/>
-    </a>
-    <a href="https://www.instagram.com/developer_pawan093?igsh=azVkeXNnZm52M2l3" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/733/733558.png" alt="Instagram"/>
-    </a>
-    <a href="https://t.me/yourprofile" target="_blank">
-      <img src="https://cdn-icons-png.flaticon.com/512/2111/2111646.png" alt="Telegram"/>
-    </a>
+<!-- Checkout Modal -->
+<div class="modal" id="checkoutModal">
+  <div class="modal-box">
+    <button class="modal-close" id="closeCheckoutModal">✕</button>
+    <h3 style="margin-bottom:14px">Checkout</h3>
+    <form id="checkoutForm">
+      <div class="field"><label for="ckName">Customer Name</label><input id="ckName" required></div>
+      <div class="two-col" style="gap:12px">
+        <div class="field"><label for="ckPhone">Phone Number</label><input id="ckPhone" required></div>
+        <div class="field"><label for="ckEmail">Email</label><input id="ckEmail" type="email"></div>
+      </div>
+      <div class="field"><label for="ckAddr">Delivery Address</label><input id="ckAddr" required></div>
+      <div class="field"><label for="ckCity">City</label><input id="ckCity" required></div>
+      <div class="field"><label for="ckNote">Additional Instructions</label><textarea id="ckNote" rows="2"></textarea></div>
+      <label style="font-size:.82rem;font-weight:600">Payment Method</label>
+      <div class="pay-methods" id="payMethods">
+        <div class="pay-chip esewa sel" data-p="eSewa">eSewa</div>
+        <div class="pay-chip khalti" data-p="Khalti">Khalti</div>
+        <div class="pay-chip fonepay" data-p="Fonepay">Fonepay</div>
+      </div>
+      <button class="btn btn-primary btn-block" type="submit">Place Order</button>
+    </form>
   </div>
+</div>
+
+<!-- Order Success Modal -->
+<div class="modal" id="successModal">
+  <div class="modal-box" style="text-align:center">
+    <button class="modal-close" id="closeSuccessModal">✕</button>
+    <div style="font-size:2.4rem">✅</div>
+    <h3 style="margin-top:10px">Order Placed Successfully!</h3>
+    <p style="color:var(--text-dim);margin-top:8px">Order Number: <strong id="orderNum"></strong></p>
+    <p style="color:var(--text-dim);font-size:.85rem;margin-top:4px">We'll contact you shortly to confirm delivery.</p>
+    <button class="btn btn-primary" style="margin-top:16px" id="successCloseBtn">Continue Shopping</button>
+  </div>
+</div>
+
+<!-- Lightbox -->
+<div class="lightbox" id="lightbox">
+  <div class="box" id="lightboxBox"></div>
+  <button class="btn btn-outline" id="closeLightbox" style="color:#fff;border-color:#fff">Close</button>
+</div>
+
+<div class="floaters">
+  <a class="fab wa" href="https://wa.me/[WHATSAPP NUMBER]" target="_blank" rel="noopener" aria-label="WhatsApp us">💬</a>
+  <a class="fab call" href="tel:[PHONE NUMBER]" aria-label="Call shop">📞</a>
+  <button class="fab top" id="toTop" aria-label="Back to top">↑</button>
 </div>
 
 <script>
-const KEY = 'shop_cases_v2';
+(function(){
+"use strict";
+// ---------- Theme ----------
+const root=document.documentElement;
+const savedTheme=localStorage.getItem('pmrc_theme');
+if(savedTheme) root.setAttribute('data-theme',savedTheme);
+function updateThemeBtn(){document.getElementById('themeToggle').textContent = root.getAttribute('data-theme')==='dark' ? '☀️' : '🌙';}
+updateThemeBtn();
+document.getElementById('themeToggle').addEventListener('click',()=>{
+  const cur=root.getAttribute('data-theme')==='dark'?'light':'dark';
+  root.setAttribute('data-theme',cur); localStorage.setItem('pmrc_theme',cur); updateThemeBtn();
+});
+// ---------- Mobile menu / search ----------
+document.getElementById('hamburger').addEventListener('click',()=>{
+  document.getElementById('mobileMenu').classList.toggle('open');
+});
+document.getElementById('searchToggle').addEventListener('click',()=>{
+  const sb=document.getElementById('searchBar'); sb.style.display=sb.style.display==='none'?'block':'none';
+});
+document.querySelectorAll('.mobile-menu a').forEach(a=>a.addEventListener('click',()=>document.getElementById('mobileMenu').classList.remove('open')));
 
-function readFileAsDataURL(file) {
-  return new Promise((res, rej) => {
-    if (!file) return res('');
-    const reader = new FileReader();
-    reader.onload = e => res(e.target.result);
-    reader.onerror = rej;
-    reader.readAsDataURL(file);
+// ---------- Data ----------
+const CATS=["All","Displays","Batteries","Charging Ports","Chargers & Adapters","Cables","Earphones & TWS","Covers","Tempered Glass","Power Banks","Speakers & Mics"];
+const PRODUCTS=[
+ {id:1,name:"AMOLED Display Assembly",cat:"Displays",price:3200,was:3600,icon:"📱",stock:"in",rating:4.6,pop:90,added:5},
+ {id:2,name:"Li-ion Replacement Battery",cat:"Batteries",price:1450,was:null,icon:"🔋",stock:"in",rating:4.4,pop:80,added:2},
+ {id:3,name:"USB-C Charging Port Flex",cat:"Charging Ports",price:650,was:null,icon:"🔌",stock:"low",rating:4.2,pop:60,added:6},
+ {id:4,name:"33W Fast Charger Adapter",cat:"Chargers & Adapters",price:1100,was:1300,icon:"⚡",stock:"in",rating:4.7,pop:95,added:1},
+ {id:5,name:"Braided USB-C Cable 1m",cat:"Cables",price:380,was:null,icon:"🔗",stock:"in",rating:4.3,pop:70,added:3},
+ {id:6,name:"TWS Earbuds Pro",cat:"Earphones & TWS",price:2400,was:2900,icon:"🎧",stock:"in",rating:4.5,pop:88,added:0},
+ {id:7,name:"Shockproof Silicone Cover",cat:"Covers",price:420,was:null,icon:"📦",stock:"in",rating:4.1,pop:55,added:4},
+ {id:8,name:"9H Tempered Glass",cat:"Tempered Glass",price:250,was:300,icon:"🛡️",stock:"in",rating:4.6,pop:99,added:0},
+ {id:9,name:"10000mAh Power Bank",cat:"Power Banks",price:1800,was:null,icon:"🔋",stock:"low",rating:4.4,pop:65,added:2},
+ {id:10,name:"Wired Handsfree Earphones",cat:"Earphones & TWS",price:180,was:220,icon:"🎧",stock:"in",rating:4.0,pop:50,added:5},
+ {id:11,name:"Phone Holder Stand",cat:"Covers",price:290,was:null,icon:"📐",stock:"in",rating:4.2,pop:40,added:7},
+ {id:12,name:"External Speaker Module",cat:"Speakers & Mics",price:520,was:null,icon:"🔊",stock:"low",rating:4.0,pop:35,added:8}
+];
+let activeCat="All", searchTerm="", sortBy="pop", availOnly=false;
+
+// category pills
+const catRow=document.getElementById('catRow');
+CATS.forEach(c=>{
+  const b=document.createElement('button'); b.className='pill'+(c==='All'?' active':''); b.textContent=c; b.dataset.c=c;
+  b.addEventListener('click',()=>{activeCat=c; document.querySelectorAll('#catRow .pill').forEach(p=>p.classList.remove('active')); b.classList.add('active'); renderProducts();});
+  catRow.appendChild(b);
+});
+document.getElementById('navSearch').addEventListener('input',e=>{searchTerm=e.target.value.toLowerCase(); renderProducts();});
+document.getElementById('sortSel').addEventListener('change',e=>{sortBy=e.target.value; renderProducts();});
+document.getElementById('availSel').addEventListener('change',e=>{availOnly=e.target.value==='in'; renderProducts();});
+
+function money(n){return "Rs. "+n.toLocaleString('en-IN');}
+
+function renderProducts(){
+  let list=PRODUCTS.filter(p=>(activeCat==='All'||p.cat===activeCat) && p.name.toLowerCase().includes(searchTerm) && (!availOnly||p.stock==='in'));
+  if(sortBy==='pop') list.sort((a,b)=>b.pop-a.pop);
+  if(sortBy==='new') list.sort((a,b)=>a.added-b.added);
+  if(sortBy==='low') list.sort((a,b)=>a.price-b.price);
+  if(sortBy==='high') list.sort((a,b)=>b.price-a.price);
+  const grid=document.getElementById('productGrid');
+  grid.innerHTML='';
+  if(list.length===0){grid.innerHTML='<div class="empty-state" style="grid-column:1/-1"><div class="ic">🔍</div>No products match your filters.</div>';return;}
+  list.forEach(p=>{
+    const card=document.createElement('div'); card.className='p-card';
+    card.innerHTML=`<div class="p-thumb">${p.icon}<span class="p-stock ${p.stock}">${p.stock==='in'?'In Stock':'Low Stock'}</span></div>
+      <div class="p-body">
+        <span class="p-cat">${p.cat}</span>
+        <span class="p-name">${p.name}</span>
+        <span class="p-rating">★★★★★ ${p.rating}</span>
+        <div class="p-price"><span class="now">${money(p.price)}</span>${p.was?`<span class="was">${money(p.was)}</span>`:''}</div>
+        <div class="p-actions">
+          <button class="btn btn-outline addBtn" data-id="${p.id}">Add to Cart</button>
+          <button class="btn btn-amber buyBtn" data-id="${p.id}">Buy Now</button>
+        </div>
+      </div>`;
+    card.querySelector('.p-thumb').addEventListener('click',()=>openProductModal(p.id));
+    card.querySelector('.p-name').addEventListener('click',()=>openProductModal(p.id));
+    card.querySelector('.addBtn').addEventListener('click',(e)=>{e.stopPropagation();addToCart(p.id,1);toast('Added to cart');});
+    card.querySelector('.buyBtn').addEventListener('click',(e)=>{e.stopPropagation();addToCart(p.id,1);openCheckout();});
+    grid.appendChild(card);
   });
 }
+renderProducts();
 
-async function saveCase() {
-  const name = nameEl.value.trim();
-  if (!name) return alert('Please enter customer name!');
-  const phone = phoneEl.value.trim();
-  const model = modelEl.value.trim();
-  const address = addressEl.value.trim();
-  const notes = notesEl.value.trim();
-  const iddata = await readFileAsDataURL(idfile.files[0]);
-  const recdata = await readFileAsDataURL(recfile.files[0]);
-
-  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
-  arr.push({ id: Date.now(), name, phone, model, address, notes, iddata, recdata, date: new Date().toLocaleString() });
-  localStorage.setItem(KEY, JSON.stringify(arr));
-  renderCases();
-  alert('✅ Case saved successfully!');
+function openProductModal(id){
+  const p=PRODUCTS.find(x=>x.id===id); if(!p) return;
+  const related=PRODUCTS.filter(x=>x.cat===p.cat && x.id!==p.id).slice(0,3);
+  document.getElementById('productModalBody').innerHTML=`
+    <div style="font-size:3rem;text-align:center;background:var(--surface-2);border-radius:12px;padding:30px 0">${p.icon}</div>
+    <h3 style="margin-top:14px">${p.name}</h3>
+    <p style="color:var(--text-dim);font-size:.85rem;margin-top:4px">${p.cat} · Compatible with most Android &amp; iOS devices</p>
+    <div class="p-price" style="margin-top:10px"><span class="now" style="font-size:1.2rem">${money(p.price)}</span>${p.was?`<span class="was">${money(p.was)}</span>`:''}</div>
+    <p style="color:var(--text-dim);font-size:.85rem;margin-top:8px">Genuine quality part, tested before sale. Specifications and compatibility confirmed at time of purchase.</p>
+    <div style="display:flex;align-items:center;gap:10px;margin:14px 0">
+      <button class="qty-btn" id="qMinus">−</button><span id="qVal">1</span><button class="qty-btn" id="qPlus">+</button>
+    </div>
+    <div style="display:flex;gap:8px">
+      <button class="btn btn-outline btn-block" id="modalAdd">Add to Cart</button>
+      <button class="btn btn-amber btn-block" id="modalBuy">Buy Now</button>
+    </div>
+    ${related.length?`<h4 style="margin-top:18px;font-size:.9rem">Related products</h4><div style="display:flex;gap:8px;margin-top:8px">${related.map(r=>`<div style="flex:1;text-align:center;background:var(--surface-2);border-radius:8px;padding:10px;font-size:.75rem"><div style="font-size:1.4rem">${r.icon}</div>${r.name}</div>`).join('')}</div>`:''}
+  `;
+  let qty=1;
+  document.getElementById('qMinus').onclick=()=>{qty=Math.max(1,qty-1);document.getElementById('qVal').textContent=qty;};
+  document.getElementById('qPlus').onclick=()=>{qty++;document.getElementById('qVal').textContent=qty;};
+  document.getElementById('modalAdd').onclick=()=>{addToCart(id,qty);toast('Added to cart');closeModal('productModal');};
+  document.getElementById('modalBuy').onclick=()=>{addToCart(id,qty);closeModal('productModal');openCheckout();};
+  document.getElementById('productModal').classList.add('open');
 }
+document.getElementById('closeProductModal').addEventListener('click',()=>closeModal('productModal'));
+function closeModal(id){document.getElementById(id).classList.remove('open');}
 
-function renderCases() {
-  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
-  if (!arr.length) return (cases.innerHTML = "<p>No cases yet.</p>");
-  let html = '';
-  arr.slice().reverse().forEach((c, i) => {
-    html += `
-      <div class="card">
-        <b>${c.name}</b> — ${c.phone} — ${c.model}
-        <button onclick="deleteCase(${c.id})" style="float:right;background:#ff7070;color:white;border:none;padding:4px 8px;border-radius:5px;">Delete</button>
-        <div><small>${c.date}</small></div>
-        <div>Address: ${c.address}</div>
-        <div>Notes: ${c.notes || '—'}</div>
-        <div>ID: ${c.iddata ? '<img class="preview" src="'+c.iddata+'">' : '—'} 
-             Receipt: ${c.recdata ? '<img class="preview" src="'+c.recdata+'">' : '—'}</div>
-      </div>
-    `;
-  });
-  cases.innerHTML = html;
+// ---------- Cart ----------
+let cart=JSON.parse(localStorage.getItem('pmrc_cart')||'[]');
+function saveCart(){localStorage.setItem('pmrc_cart',JSON.stringify(cart));renderCart();}
+function addToCart(id,qty){
+  const existing=cart.find(c=>c.id===id);
+  if(existing) existing.qty+=qty; else cart.push({id,qty});
+  saveCart();
 }
-
-function deleteCase(id) {
-  if (!confirm("Delete this case?")) return;
-  let arr = JSON.parse(localStorage.getItem(KEY) || '[]');
-  arr = arr.filter(c => c.id !== id);
-  localStorage.setItem(KEY, JSON.stringify(arr));
-  renderCases();
+function renderCart(){
+  const body=document.getElementById('cartBody');
+  const badge=document.getElementById('cartBadge');
+  const totalQty=cart.reduce((s,c)=>s+c.qty,0);
+  badge.textContent=totalQty;
+  if(cart.length===0){
+    body.innerHTML='<div class="empty-state"><div class="ic">🛒</div>Your cart is empty.</div>';
+  } else {
+    body.innerHTML=cart.map(c=>{
+      const p=PRODUCTS.find(x=>x.id===c.id); if(!p) return '';
+      return `<div class="cart-item">
+        <div class="thumb">${p.icon}</div>
+        <div class="info">
+          <div style="font-size:.88rem;font-weight:600">${p.name}</div>
+          <div style="font-size:.8rem;color:var(--text-dim)">${money(p.price)}</div>
+          <div class="qty-row">
+            <button class="qty-btn" data-act="minus" data-id="${c.id}">−</button>
+            <span>${c.qty}</span>
+            <button class="qty-btn" data-act="plus" data-id="${c.id}">+</button>
+            <button class="btn-sm btn-outline" data-act="remove" data-id="${c.id}" style="margin-left:auto;padding:5px 9px">Remove</button>
+          </div>
+        </div>
+      </div>`;
+    }).join('');
+  }
+  const subtotal=cart.reduce((s,c)=>{const p=PRODUCTS.find(x=>x.id===c.id);return s+(p?p.price*c.qty:0);},0);
+  const delivery=subtotal>0? (subtotal>3000?0:150) : 0;
+  document.getElementById('sumSub').textContent=money(subtotal);
+  document.getElementById('sumDel').textContent=delivery===0?'Free':money(delivery);
+  document.getElementById('sumTotal').textContent=money(subtotal+delivery);
+  document.getElementById('checkoutBtn').disabled=cart.length===0;
 }
+document.getElementById('cartBody').addEventListener('click',e=>{
+  const btn=e.target.closest('button'); if(!btn) return;
+  const id=parseInt(btn.dataset.id); const item=cart.find(c=>c.id===id); if(!item) return;
+  if(btn.dataset.act==='plus') item.qty++;
+  if(btn.dataset.act==='minus'){item.qty--; if(item.qty<=0) cart=cart.filter(c=>c.id!==id);}
+  if(btn.dataset.act==='remove') cart=cart.filter(c=>c.id!==id);
+  saveCart();
+});
+renderCart();
 
-document.getElementById("save").addEventListener("click", saveCase);
-document.getElementById("export").addEventListener("click", () => {
-  const arr = JSON.parse(localStorage.getItem(KEY) || '[]');
-  if (!arr.length) return alert("No data to export");
-  const rows = arr.map(r => [r.name, r.phone, r.model, r.address, r.notes, r.date].map(x => `"${(x||'').replaceAll('"','""')}"`).join(',')).join('\n');
-  const csv = 'Name,Phone,Model,Address,Notes,Date\n' + rows;
-  const blob = new Blob([csv], { type: 'text/csv' });
-  const url = URL.createObjectURL(blob);
-  const a = document.createElement('a');
-  a.href = url;
-  a.download = 'cases.csv';
-  a.click();
-  URL.revokeObjectURL(url);
+// drawer open/close
+const overlay=document.getElementById('overlay'), drawer=document.getElementById('cartDrawer');
+function openCart(){drawer.classList.add('open');overlay.classList.add('show');}
+function closeCart(){drawer.classList.remove('open');overlay.classList.remove('show');}
+document.getElementById('cartToggle').addEventListener('click',openCart);
+document.getElementById('closeCart').addEventListener('click',closeCart);
+document.getElementById('continueBtn').addEventListener('click',closeCart);
+overlay.addEventListener('click',()=>{closeCart();closeModal('productModal');closeModal('checkoutModal');closeModal('successModal');});
+document.getElementById('acctBtn').addEventListener('click',()=>toast('Customer accounts coming soon'));
+document.getElementById('trackOrderLink').addEventListener('click',(e)=>{e.preventDefault();toast('Order tracking coming soon');});
+
+// ---------- Checkout ----------
+function openCheckout(){
+  if(cart.length===0){toast('Your cart is empty');return;}
+  closeCart();
+  document.getElementById('checkoutModal').classList.add('open');
+}
+document.getElementById('checkoutBtn').addEventListener('click',openCheckout);
+document.getElementById('closeCheckoutModal').addEventListener('click',()=>closeModal('checkoutModal'));
+document.querySelectorAll('.pay-chip').forEach(chip=>{
+  chip.addEventListener('click',()=>{document.querySelectorAll('.pay-chip').forEach(c=>c.classList.remove('sel'));chip.classList.add('sel');});
+});
+document.getElementById('checkoutForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  const orderNum='PMRC-'+Date.now().toString().slice(-8);
+  document.getElementById('orderNum').textContent=orderNum;
+  closeModal('checkoutModal');
+  document.getElementById('successModal').classList.add('open');
+  cart=[]; saveCart();
+  e.target.reset();
+});
+document.getElementById('closeSuccessModal').addEventListener('click',()=>closeModal('successModal'));
+document.getElementById('successCloseBtn').addEventListener('click',()=>closeModal('successModal'));
+
+// ---------- Repair booking ----------
+document.getElementById('repairForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  toast('Repair booking received — we\\'ll call you shortly!');
+  e.target.reset();
+});
+document.getElementById('contactForm').addEventListener('submit',e=>{
+  e.preventDefault();
+  toast('Message sent — thank you!');
+  e.target.reset();
 });
 
-const nameEl = document.getElementById('name');
-const phoneEl = document.getElementById('phone');
-const modelEl = document.getElementById('model');
-const addressEl = document.getElementById('address');
-const notesEl = document.getElementById('notes');
-const idfile = document.getElementById('idfile');
-const recfile = document.getElementById('recfile');
-const cases = document.getElementById('cases');
+// ---------- Gallery ----------
+const GAL=[
+ {cat:'Repairs',icon:'🔧',label:'Mobile Repairing'},
+ {cat:'Workstation',icon:'🔩',label:'Motherboard Work'},
+ {cat:'Repairs',icon:'📱',label:'Display Replacement'},
+ {cat:'Repairs',icon:'🔋',label:'Battery Replacement'},
+ {cat:'Repairs',icon:'🔌',label:'Charging-Port Repair'},
+ {cat:'Workstation',icon:'🛠️',label:'Repair Tools'},
+ {cat:'Accessories',icon:'📦',label:'Spare Parts'},
+ {cat:'Accessories',icon:'🎧',label:'Accessories'},
+ {cat:'Shop',icon:'🏬',label:'Shop Interior'},
+ {cat:'Shop',icon:'🙋',label:'Customer Service'},
+ {cat:'Repairs',icon:'✅',label:'Completed Repairs'},
+ {cat:'Workstation',icon:'🧰',label:'Workbench'}
+];
+const galGrid=document.getElementById('galGrid');
+function renderGallery(filter){
+  galGrid.innerHTML='';
+  GAL.filter(g=>filter==='all'||g.cat===filter).forEach(g=>{
+    const d=document.createElement('div'); d.className='gal-item';
+    d.innerHTML=`<span class="ic">${g.icon}</span><span>${g.label}</span>`;
+    d.addEventListener('click',()=>{document.getElementById('lightboxBox').textContent=g.icon;document.getElementById('lightbox').classList.add('open');});
+    galGrid.appendChild(d);
+  });
+}
+renderGallery('all');
+document.querySelectorAll('#galFilterRow .pill').forEach(b=>{
+  b.addEventListener('click',()=>{document.querySelectorAll('#galFilterRow .pill').forEach(p=>p.classList.remove('active'));b.classList.add('active');renderGallery(b.dataset.g);});
+});
+document.getElementById('closeLightbox').addEventListener('click',()=>document.getElementById('lightbox').classList.remove('open'));
 
-renderCases();
+// ---------- Toast ----------
+function toast(msg){
+  const wrap=document.getElementById('toastWrap');
+  const t=document.createElement('div'); t.className='toast'; t.textContent=msg;
+  wrap.appendChild(t);
+  setTimeout(()=>t.remove(),2600);
+}
+
+// ---------- Back to top ----------
+const toTopBtn=document.getElementById('toTop');
+window.addEventListener('scroll',()=>{toTopBtn.classList.toggle('show',window.scrollY>500);});
+toTopBtn.addEventListener('click',()=>window.scrollTo({top:0,behavior: matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'}));
+
+// active nav link on scroll
+const sections=['home','shop','repair-services','gallery','why','contact'];
+window.addEventListener('scroll',()=>{
+  let cur='home';
+  sections.forEach(id=>{const el=document.getElementById(id); if(el && window.scrollY>=el.offsetTop-90) cur=id;});
+  document.querySelectorAll('.nav-links a').forEach(a=>a.classList.toggle('active', a.getAttribute('href')==='#'+cur));
+});
+})();
 </script>
-
 </body>
 </html>
